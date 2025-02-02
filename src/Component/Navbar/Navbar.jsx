@@ -37,6 +37,7 @@ const Navbar = () => {
               <MoreVertical size={28} />
             </button>
           </div>
+
           {location.pathname === "/contact-us" ? (
             <div className="">
               <p className="lg:ml-40 mt-12 text-2xl font-semibold text-white ">
@@ -47,6 +48,20 @@ const Navbar = () => {
                 Have questions about building the next generation of banking
                 experiences, our pricing,
                 <br /> or our customer success stories?
+              </p>
+            </div>
+          ) : location.pathname === "/about" ? (
+            <div className="">
+              <p className=" lg:ml-40 mt-12 text-2xl  text-blue-300 font-semibold ">
+                ABOUT US
+              </p>
+              <p className="lg:ml-40 mt-7 text-3xl lg:text-6xl">
+                Paving the way <br />
+                ahead for finance
+              </p>
+              <p className="lg:ml-40 mt-7 font-semibold">
+                We’re building technologies that will power the future of <br />
+                banking and beyond
               </p>
             </div>
           ) : (
@@ -85,13 +100,7 @@ const Navbar = () => {
               >
                 About
               </Link>
-              <Link
-                to="/about"
-                href="#"
-                className="text-white hover:text-gray-300"
-              >
-                About
-              </Link>
+
               <Link
                 to="/about"
                 href="#"

@@ -27,19 +27,21 @@ const banks = [
 
 const Sponsor = () => {
   return (
-    <div className="bg-white  max-w-7xl lg:mx-auto mt-10 md:ml-5 md:mr-5 ml-4 mr-3">
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-20 ">
-        {banks.map((bank, index) => (
-          <div key={index} className="flex flex-col items-center">
-            <img
-              src={`/images/${bank.logo}`}
-              className="h-16 md:h-20 w-40 object-contain"
-            />
-            <p className="text-sm md:text-base text-gray-700 mt-2">
-              {bank.name}
-            </p>
-          </div>
-        ))}
+    <div>
+      <div className="bg-white  max-w-7xl lg:mx-auto mt-10 md:ml-5 md:mr-5 ml-4 mr-3">
+        <div className="grid grid-cols-3 md:grid-cols-5 gap-20 ">
+          {banks.map((bank, index) => (
+            <div key={index} className="flex flex-col items-center">
+              <img
+                src={`/images/${bank.logo}`}
+                className="h-16 md:h-20 w-40 object-contain"
+              />
+              <p className="text-sm md:text-base text-gray-700 mt-2">
+                {bank.name}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
