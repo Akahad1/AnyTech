@@ -2,7 +2,7 @@
 const Sponsor2 = () => {
   return (
     <div>
-      <div className="max-w-7xl mx-auto mt-24">
+      <div className="max-w-7xl mx-auto mt-32">
         <p className="lg:text-5xl text-2xl ml-3 mr-3 font-semibold pb-6  border-b-1 border-gray-200">
           Empowering more than{" "}
           <span className="text-blue-600">40 financial institutions</span> to

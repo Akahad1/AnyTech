@@ -13,7 +13,24 @@ const Navbar = () => {
           <div className="container max-w-6xl mx-auto flex justify-between items-center">
             <h1 className="text-xl justify-start lg:3xl font-bold">ANYTECH</h1>
             <div className="hidden md:flex gap-6 justify-center">
-              <Link className="text-xl">Solutions</Link>
+              <div className="flex  ">
+                <div className="relative group   cursor-pointer">
+                  <p className="text-center  text-xl">Solutions</p>
+
+                  {/* Hidden items */}
+                  <div className="absolute left-0 top-full mt-2 w-40 bg-white shadow-lg rounded-lg p-2 opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                    <Link to="/AnyCaaS">
+                      <p className="p-2 text-black rounded-md">AnyCaaS</p>
+                    </Link>
+                    <Link to="/AnyBaaS">
+                      <p className="p-2  text-black rounded-md">AnyBaaS</p>
+                    </Link>
+                    <Link to="/AnyPaaS">
+                      <p className="p-2 text-black  rounded-md">AnyPaaS</p>
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <Link to="/about" className="text-xl pb-2 hover:border-b-1">
                 About
               </Link>
@@ -21,6 +38,7 @@ const Navbar = () => {
                 Services
               </Link>
             </div>
+
             <div className="justify-end hidden md:inline lg:inline">
               <Link to="/contact-us">
                 {" "}
