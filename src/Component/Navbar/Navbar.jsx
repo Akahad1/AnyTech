@@ -1,28 +1,32 @@
 import { useState } from "react";
 import { MoreVertical, X } from "lucide-react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="relative">
-      <div className="lg:bg-[rgb(0,89,194)] bg-no-repeat lg:bg-[url('../../../public/Image/WaveLinesDesktop1.svg')] bg-cover lg:h-96">
+      <div className="bg-[rgb(0,89,194)]  bg-no-repeat bg-[url('../../../public/Image/WaveLinesDesktop1.svg')] bg-cover h-96">
         <nav className="bg-[rgb(0,89,194)] p-4 text-white fixed w-full z-50">
-          <div className="container mx-auto flex justify-between items-center">
-            <h1 className="text-xl font-bold">Brand</h1>
-            <div className="hidden md:flex gap-6">
-              <a href="#" className="hover:text-gray-200 ">
-                Home
-              </a>
-              <a href="#" className="hover:text-gray-200">
+          <div className="container max-w-6xl mx-auto flex justify-between items-center">
+            <h1 className="text-xl justify-start lg:3xl font-bold">ANYTECH</h1>
+            <div className="hidden md:flex gap-6 justify-center">
+              <Link className="text-xl">Solutions</Link>
+              <Link to="/about" className="text-xl pb-2 hover:border-b-1">
                 About
-              </a>
-              <a href="#" className="hover:text-gray-200">
+              </Link>
+              <Link to="/services" className="text-xl pb-2 hover:border-b-1 ">
                 Services
-              </a>
-              <a href="#" className="hover:text-gray-200">
-                Contact
-              </a>
+              </Link>
+            </div>
+            <div className="justify-end hidden md:inline lg:inline">
+              <Link to="contactus">
+                {" "}
+                <button className=" border border-white p-3 font-semibold text-xl hover:bg-white hover:text-blue-700 ">
+                  Contact Us
+                </button>
+              </Link>
             </div>
             {/* Mobile Menu Button */}
             <button
@@ -32,10 +36,22 @@ const Navbar = () => {
               <MoreVertical size={28} />
             </button>
           </div>
-
+          <div className="">
+            <p className="lg:text-6xl lg:ml-40 mt-12 text-2xl font-semibold text-white ">
+              Embrace the <br />
+              future of finance
+            </p>
+            <p className="lg:ml-40 mt-7">
+              Reimagine financial services with AnyTech’s open platform,
+              distributed <br /> banking solution that powers transformation
+            </p>
+            <button className="mt-7 lg:ml-40 bg-orange-400 px-6 p-3">
+              Reach Out to Us
+            </button>
+          </div>
           {/* Sidebar */}
           <div
-            className={`fixed top-0 left-0 h-64 w-full bg-blue-700 p-5 transform ${
+            className={`fixed top-0 left-0 h-72 w-full bg-blue-700 p-5 transform ${
               isOpen ? "translate-x-0" : "-translate-x-full"
             } transition-transform duration-300 ease-in-out md:hidden`}
           >
@@ -55,9 +71,9 @@ const Navbar = () => {
               <a href="#" className="text-white hover:text-gray-300">
                 Services
               </a>
-              <a href="#" className="text-white hover:text-gray-300">
-                Contact
-              </a>
+              <button className=" border border-white p-3 font-semibold text-xl hover:bg-white hover:text-blue-700 ">
+                Contact Us
+              </button>
             </nav>
           </div>
         </nav>
