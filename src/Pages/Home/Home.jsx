@@ -1,5 +1,7 @@
 // import { useLocation } from "react-router";
+import Footer from "../../Component/Footer/Footer";
 import Navbar from "../../Component/Navbar/Navbar";
+import Philosophy from "../../Component/Philosophy/Philosophy";
 import Section1 from "../../Component/Section1/Section1";
 
 const Home = () => {
@@ -7,9 +9,10 @@ const Home = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="">
-        <Section1></Section1>
-      </div>
+
+      <Section1></Section1>
+      <Philosophy></Philosophy>
+      <Footer></Footer>
     </div>
   );
 };
