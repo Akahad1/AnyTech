@@ -1,7 +1,7 @@
 const Section = () => {
   return (
     <div>
-      <div className="lg:flex md:flex lg:justify-center lg:mt-52 md:gap-11 gap-52 md:mt-20 ml-4 mr-4">
+      <div className="lg:flex md:flex lg:justify-center lg:mt-20 md:gap-11 gap-52 md:mt-20 ml-4 mr-4">
         <div>
           <p className="text-blue-600 font-semibold lg:mt-24  mt-10 ">
             POWERING THE FUTURE OF FINANCE

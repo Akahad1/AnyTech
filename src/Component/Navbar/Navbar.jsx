@@ -34,7 +34,7 @@ const Navbar = () => {
               <Link to="/about" className="text-xl pb-2 hover:border-b-1">
                 About
               </Link>
-              <Link to="/services" className="text-xl pb-2 hover:border-b-1 ">
+              <Link to="/about" className="text-xl pb-2 hover:border-b-1 ">
                 Services
               </Link>
             </div>
@@ -111,6 +111,23 @@ const Navbar = () => {
               <X size={28} />
             </button>
             <nav className="flex flex-col gap-6 mt-10">
+              <div className="flex  ">
+                <div className="relative group   cursor-pointer">
+                  <p className="text-center  text-xl">Solutions</p>
+
+                  <div className="absolute left-0 top-full mt-2 w-40 bg-white shadow-2xl s rounded-lg p-2 opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300 ">
+                    <Link to="/AnyCaaS">
+                      <p className="p-2 text-black rounded-md">AnyCaaS</p>
+                    </Link>
+                    <Link to="/AnyBaaS">
+                      <p className="p-2  text-black rounded-md">AnyBaaS</p>
+                    </Link>
+                    <Link to="/AnyPaaS">
+                      <p className="p-2 text-black  rounded-md">AnyPaaS</p>
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <Link
                 to="/about"
                 href="#"

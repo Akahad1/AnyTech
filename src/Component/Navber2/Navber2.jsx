@@ -34,7 +34,7 @@ const Navber2 = () => {
               <Link to="/about" className="text-xl pb-2 hover:border-b-1">
                 About
               </Link>
-              <Link to="/services" className="text-xl pb-2 hover:border-b-1 ">
+              <Link to="/about" className="text-xl pb-2 hover:border-b-1 ">
                 Services
               </Link>
             </div>
@@ -63,27 +63,41 @@ const Navber2 = () => {
               our solutions
             </p>
             <p className="lg:ml-40 font-semibold lg:text-6xl mt-7">
+              Robust card issuance <br />
+              and management
+            </p>
+            <button className="mt-10 lg:ml-40 text-white p-3 lg:rounded-2xl bg-blue-700 px-7 text-xl">
+              AnyCaaS
+            </button>
+          </div>
+        ) : location.pathname === "/AnyBaaS" ? (
+          <div className="bg-no-repeat bg-[url('../../../../public/Image/WaveLinesDesktop3.svg')] bg-cover h-96">
+            <p className="lg:ml-40 mt-12 text-2xl font-semibold text-blue-500 ">
+              our solutions
+            </p>
+            <p className="lg:ml-40 font-semibold lg:text-6xl mt-7">
               High-velocity <br />
               payment processing
             </p>
             <button className="mt-10 lg:ml-40 text-white p-3 lg:rounded-2xl bg-blue-700 px-7 text-xl">
-              Anypaas
+              AnyBaaS
+            </button>
+          </div>
+        ) : location.pathname === "/AnyPaaS" ? (
+          <div className="bg-no-repeat bg-[url('../../../../public/Image/WaveLinesDesktop3.svg')] bg-cover h-96">
+            <p className="lg:ml-40 mt-12 text-2xl font-semibold text-blue-500 ">
+              our solutions
+            </p>
+            <p className="lg:ml-40 font-semibold lg:text-6xl mt-7">
+              Banking redesignedbr <br />
+              for innovation
+            </p>
+            <button className="mt-10 lg:ml-40 text-white p-3 lg:rounded-2xl bg-blue-700 px-7 text-xl">
+              AnyPaaS
             </button>
           </div>
         ) : (
-          <div className="">
-            <p className="lg:text-6xl lg:ml-40 mt-12 text-2xl font-semibold text-white ">
-              Embrace the <br />
-              future of finance
-            </p>
-            <p className="lg:ml-40 mt-7">
-              Reimagine financial services with AnyTech’s open platform,
-              distributed <br /> banking solution that powers transformation
-            </p>
-            <button className="mt-7 lg:ml-40 bg-orange-400 px-6 p-3">
-              Reach Out to Us
-            </button>
-          </div>
+          <></>
         )}
 
         {/* Sidebar */}
@@ -96,9 +110,26 @@ const Navber2 = () => {
             className="absolute top-4 right-4 text-white"
             onClick={() => setIsOpen(false)}
           >
-            <MoreVertical size={28} />
+            <MoreVertical className="" size={28} />
           </button>
           <nav className="flex flex-col gap-6 mt-10">
+            <div className="flex  ">
+              <div className="relative group   cursor-pointer">
+                <p className="text-center  text-xl">Solutions</p>
+
+                <div className="absolute left-0 top-full mt-2 w-40 bg-white shadow-2xl s rounded-lg p-2 opacity-0 group-hover:opacity-100 group-hover:visible transition-all duration-300 ">
+                  <Link to="/AnyCaaS">
+                    <p className="p-2 text-black rounded-md">AnyCaaS</p>
+                  </Link>
+                  <Link to="/AnyBaaS">
+                    <p className="p-2  text-black rounded-md">AnyBaaS</p>
+                  </Link>
+                  <Link to="/AnyPaaS">
+                    <p className="p-2 text-black  rounded-md">AnyPaaS</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link
               to="/about"
               href="#"
@@ -115,7 +146,7 @@ const Navber2 = () => {
               Services
             </Link>
             <Link to="/contact-us">
-              <button className=" border border-white p-3 font-semibold text-xl hover:bg-white hover:text-blue-700 ">
+              <button className=" border border-white p-3 font-semibold text-xl hover:bg-white  ">
                 Contact Us
               </button>
             </Link>
