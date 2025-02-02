@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       <div className="bg-[rgb(0,89,194)]  bg-no-repeat bg-[url('../../../public/Image/WaveLinesDesktop1.svg')] bg-cover h-96">
-        <nav className="bg-[rgb(0,89,194)] p-4 text-white fixed w-full z-50">
+        <nav className="bg-[rgb(0,89,194)] p-4 text-white  w-full z-50">
           <div className="container max-w-6xl mx-auto flex justify-between items-center">
             <h1 className="text-xl justify-start lg:3xl font-bold">ANYTECH</h1>
             <div className="hidden md:flex gap-6 justify-center">
@@ -80,7 +80,7 @@ const Navbar = () => {
 
         {/* SVG at the bottom of the background section */}
         <svg
-          className="absolute hidden lg:flex md:flex mt-80 "
+          className="absolute hidden lg:flex md:flex  "
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
