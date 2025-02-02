@@ -1,26 +1,35 @@
+import { useLocation } from "react-router";
+
 const Footer = () => {
+  const location = useLocation();
   return (
     <div>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path
-          fill="#0059C2"
-          className="top-0"
-          fillOpacity="1"
-          d="M0,64L1440,256L1440,320L0,320Z"
-        ></path>
-      </svg>
-      <div className="bg-[rgb(0,89,194)]  bg-no-repeat  bg-cover h-80 ">
-        <p className="text-2xl lg:text-5xl lg:ml-32 text-white pt-6 mb-6 font-semibold ml-3">
-          Legacy no longer
-        </p>
-        <p className="lg:ml-32 ml-3 text-white text-xl font-semibold">
-          Talk to us to find out how we can transform your organisation for the
-          future
-        </p>
-        <button className="mt-7  ml-3 lg:ml-32 bg-orange-400 px-6 p-3">
-          Contact Us
-        </button>
-      </div>
+      {location.pathname === "/contact-us" ? (
+        <></>
+      ) : (
+        <>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#0059C2"
+              className="top-0"
+              fillOpacity="1"
+              d="M0,64L1440,256L1440,320L0,320Z"
+            ></path>
+          </svg>
+          <div className="bg-[rgb(0,89,194)]  bg-no-repeat  bg-cover h-80 ">
+            <p className="text-2xl lg:text-5xl lg:ml-32 text-white pt-6 mb-6 font-semibold ml-3">
+              Legacy no longer
+            </p>
+            <p className="lg:ml-32 ml-3 text-white text-xl font-semibold">
+              Talk to us to find out how we can transform your organisation for
+              the future
+            </p>
+            <button className="mt-7  ml-3 lg:ml-32 bg-orange-400 px-6 p-3">
+              Contact Us
+            </button>
+          </div>
+        </>
+      )}
       <footer className="bg-[#031d3c] text-white py-6">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">

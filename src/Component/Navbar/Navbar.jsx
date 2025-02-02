@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { MoreVertical, X } from "lucide-react";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <div className="relative">
-      <div className="bg-[rgb(0,89,194)]  bg-no-repeat bg-[url('../../../public/Image/WaveLinesDesktop1.svg')] bg-cover h-96">
+      <div className="bg-[rgb(0,89,194)]   bg-no-repeat bg-[url('../../../public/Image/WaveLinesDesktop1.svg')] bg-cover h-96">
         <nav className="bg-[rgb(0,89,194)] p-4 text-white  w-full z-50">
           <div className="container max-w-6xl mx-auto flex justify-between items-center">
             <h1 className="text-xl justify-start lg:3xl font-bold">ANYTECH</h1>
@@ -21,7 +22,7 @@ const Navbar = () => {
               </Link>
             </div>
             <div className="justify-end hidden md:inline lg:inline">
-              <Link to="contactus">
+              <Link to="/contact-us">
                 {" "}
                 <button className=" border border-white p-3 font-semibold text-xl hover:bg-white hover:text-blue-700 ">
                   Contact Us
@@ -36,19 +37,34 @@ const Navbar = () => {
               <MoreVertical size={28} />
             </button>
           </div>
-          <div className="">
-            <p className="lg:text-6xl lg:ml-40 mt-12 text-2xl font-semibold text-white ">
-              Embrace the <br />
-              future of finance
-            </p>
-            <p className="lg:ml-40 mt-7">
-              Reimagine financial services with AnyTech’s open platform,
-              distributed <br /> banking solution that powers transformation
-            </p>
-            <button className="mt-7 lg:ml-40 bg-orange-400 px-6 p-3">
-              Reach Out to Us
-            </button>
-          </div>
+          {location.pathname === "/contact-us" ? (
+            <div className="">
+              <p className="lg:ml-40 mt-12 text-2xl font-semibold text-white ">
+                Contact US
+              </p>
+              <p className="lg:ml-40 font-semibold text-5xl mt-7">Let’s talk</p>
+              <p className="lg:ml-40  mt-7">
+                Have questions about building the next generation of banking
+                experiences, our pricing,
+                <br /> or our customer success stories?
+              </p>
+            </div>
+          ) : (
+            <div className="">
+              <p className="lg:text-6xl lg:ml-40 mt-12 text-2xl font-semibold text-white ">
+                Embrace the <br />
+                future of finance
+              </p>
+              <p className="lg:ml-40 mt-7">
+                Reimagine financial services with AnyTech’s open platform,
+                distributed <br /> banking solution that powers transformation
+              </p>
+              <button className="mt-7 lg:ml-40 bg-orange-400 px-6 p-3">
+                Reach Out to Us
+              </button>
+            </div>
+          )}
+
           {/* Sidebar */}
           <div
             className={`fixed top-0 left-0 h-72 w-full bg-blue-700 p-5 transform ${
@@ -62,18 +78,32 @@ const Navbar = () => {
               <X size={28} />
             </button>
             <nav className="flex flex-col gap-6 mt-10">
-              <a href="#" className="text-white hover:text-gray-300">
-                Home
-              </a>
-              <a href="#" className="text-white hover:text-gray-300">
+              <Link
+                to="/about"
+                href="#"
+                className="text-white hover:text-gray-300"
+              >
                 About
-              </a>
-              <a href="#" className="text-white hover:text-gray-300">
+              </Link>
+              <Link
+                to="/about"
+                href="#"
+                className="text-white hover:text-gray-300"
+              >
+                About
+              </Link>
+              <Link
+                to="/about"
+                href="#"
+                className="text-white hover:text-gray-300"
+              >
                 Services
-              </a>
-              <button className=" border border-white p-3 font-semibold text-xl hover:bg-white hover:text-blue-700 ">
-                Contact Us
-              </button>
+              </Link>
+              <Link to="/contact-us">
+                <button className=" border border-white p-3 font-semibold text-xl hover:bg-white hover:text-blue-700 ">
+                  Contact Us
+                </button>
+              </Link>
             </nav>
           </div>
         </nav>
